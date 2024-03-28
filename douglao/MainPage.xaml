@@ -22,16 +22,31 @@
             Grid.ColumnSpan="3"/>
 
     <Label Text="Los Mamacos"
-           TextColor="Blue"
-           FontSize="38"
-           HorizontalOptions="Fill"
+           TextColor="Red"
+           FontSize="40"
+           HorizontalOptions="Center"
+           BackgroundColor="Orange"
+           Margin="5,60,5,60"
            Grid.Row="0"
-           Grid.ColumnSpan="2"/>
+           Grid.ColumnSpan="3"/>
 
     <Button Text="🍌INICIAR🍌"
             TextColor="Violet"
+            FontSize="25"
+            Margin="30,60,30,60"
+            HorizontalOptions="Center"
+            VerticalOptions="End"
             Grid.Row="1"
-            Grid.Column="1"/>
+            Grid.ColumnSpan="3"/>
+
+    <Button Text="INFORMAÇÕES"
+            TextColor="Violet"
+            FontSize="25"
+            Margin="30,60,30,60"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            Grid.Row="2"
+            Grid.ColumnSpan="3"/>
    </Grid>
 
 </ContentPage>
