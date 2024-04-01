@@ -29,8 +29,26 @@
            Margin="5,60,5,60"
            Grid.Row="0"
            Grid.ColumnSpan="3"/>
+<!--=========================================================================================================================================-->
+    <Frame>
+        <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
 
-    <Button Text="🍌INICIAR🍌"
+        </Grid>
+
+        <Label Text="Ele é um macaco e é isso. MACACO."
+               Grid.Row="1"
+               FontSize="25"/>
+    </Frame>
+<!--=========================================================================================================================================-->
+
+    <Button 
+            Clicked="IrOutraPage"
+            Text="🍌INICIAR🍌"
             TextColor="Violet"
             FontSize="25"
             Margin="30,60,30,60"
@@ -41,6 +59,8 @@
 
     <Button Text="INFORMAÇÕES"
             TextColor="Violet"
+            x:Name="Oframe"
+            Clicked="FrameON"
             FontSize="25"
             Margin="30,60,30,60"
             HorizontalOptions="Center"

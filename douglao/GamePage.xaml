@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="douglao.playerPage">
+             x:Class="douglao.GamePage">
 
    <Grid>
     <Grid.RowDefinitions>
@@ -16,15 +16,18 @@
         <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
 
-   <Label Text="joabe"
-          TextColor="Red"
-          Margin=""
-          Grid.Row="0"
-          Grid.ColumnSpan="3"
-          />
+    <Image Source="polonorte.jfif"
+           Aspect="AspectFill"
+           Grid.RowSpan="3"
+           Grid.ColumnSpan="3"/>
 
-    <image x:Name=""
-           Source=""/>
+    <Image Source="mamaco.png"
+           Margin="50,50,50,50"
+           Aspect="Center"
+           VerticalOptions="End"
+           Grid.RowSpan="3"
+           Grid.ColumnSpan="3"/>
+
    </Grid>
 
 </ContentPage>
