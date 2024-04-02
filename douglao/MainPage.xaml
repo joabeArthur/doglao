@@ -30,23 +30,39 @@
            Grid.Row="0"
            Grid.ColumnSpan="3"/>
 <!--=========================================================================================================================================-->
-    <Frame>
+    <Frame x:Name="FrameMenu"
+           IsVisible="false"
+           BackgroundColor="Black"
+           HorizontalOptions="Fill"
+           VerticalOptions="Fill"
+           Grid.RowSpan="3"
+           Grid.ColumnSpan="3">
         <Grid>
     <Grid.RowDefinitions>
         <RowDefinition Height="*"/>
         <RowDefinition Height="*"/>
-        <RowDefinition Height="*"/>
+        <RowDefinition Height="60"/>
     </Grid.RowDefinitions>
 
         </Grid>
 
         <Label Text="Ele é um macaco e é isso. MACACO."
                Grid.Row="1"
+               TextColor="Red"
                FontSize="25"/>
+
+        <Button x:Name="VoltarBut"
+                Clicked="FrameOFF"
+                BackgroundColor="Red"
+                Text="VOLTAR"
+                FontSize="25"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Row="3"/>
     </Frame>
 <!--=========================================================================================================================================-->
 
-    <Button 
+    <Button x:Name="IniciarMenu"
             Clicked="IrOutraPage"
             Text="🍌INICIAR🍌"
             TextColor="Violet"

@@ -15,12 +15,20 @@ public partial class MainPage : ContentPage
 
 	public void FrameON(object sender, EventArgs args)
 	{
-		Oframe.IsVisible = true;
+		FrameMenu.IsVisible = true;
+		VoltarBut.IsVisible = true;
+
+		IniciarMenu.IsVisible = false;
+		Oframe.IsVisible = false;
 	}
 
 	public void FrameOFF(object sender, EventArgs args)
 	{
-		Oframe.IsVisible = false;
+		FrameMenu.IsVisible = false;
+		VoltarBut.IsVisible = false;
+
+		IniciarMenu.IsVisible = true;
+		Oframe.IsVisible = true;
 	}
 
 
