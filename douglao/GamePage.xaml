@@ -16,28 +16,55 @@
         <ColumnDefinition Width="*"/>
     </Grid.ColumnDefinitions>
 
+<!--====================================================================================================================================================================-->
+
     <Image Source="polonorte.jfif"
            Aspect="AspectFill"
            Grid.RowSpan="3"
            Grid.ColumnSpan="3"/>
 
-    <Image Source="mamaco.png"
+    <Image x:Name="bixoimg"
            Margin="50,50,50,50"
            Aspect="Center"
            VerticalOptions="End"
            Grid.RowSpan="3"
            Grid.ColumnSpan="3"/>
+
+
 <!--====================================================================================================================================================================-->
+
+
+    <Button x:Name="ButaoDireita"
+            Clicked="ButaoFunfaD"
+            Text="➡️"
+            Grid.Row="1"
+            Grid.Column="3"
+            HorizontalOptions="End"
+            VerticalOptions="Center"/>
+    
+    <Button x:Name="ButaoEsquerda"
+            Clicked="ButaoFunfaE"
+            Text="⬅️"
+            Grid.Row="1"
+            Grid.Column="0"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"/>
+
+            
+<!--====================================================================================================================================================================-->
+
+
     <Frame x:Name="AcoesObejetos"
            Margin="70"
            HorizontalOptions="End"
            VerticalOptions="Center"
+           IsVisible="false"
            Grid.Row="1"
            Grid.Column="3"/>
 
-    <ImageButton Source="dolly.png"
+   <!-- <ImageButton Source="dolly.png"
                  Clicked=""
-                 />
+                 />-->
 
 <!--====================================================================================================================================================================-->
    </Grid>
