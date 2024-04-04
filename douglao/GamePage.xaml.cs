@@ -7,29 +7,69 @@ public partial class GamePage : ContentPage
 
 	calango calango;
 
-	Losmamacos atual;
+	Losmamacos GetCoisas;
 	public GamePage()
 	{
 		InitializeComponent();
 
 		mamaco = new mamaco();
 		calango = new calango();
-		atual = mamaco;
+		GetCoisas = mamaco;
 
-		bixoimg.Source = atual.GetCoisas();
+		
 	}
-
-	
-	public void Obixo()
+//-----------------------------------------------------------------------------------------------------------------\\
+	protected void TrocaDeBixoD(object sender, EventArgs args)
 	{
-		if (atual == mamaco)
+		if (GetCoisas == mamaco)
 		{
-			atual = calango;
+			GetCoisas = calango;
 		}
-		else if (atual == calango)
+		else if (GetCoisas == calango)
 		{
-			atual = mamaco;
+			GetCoisas = mamaco;
 		}
+
+		Bixoimg.Source = GetCoisas.GetCoisas();
+
 	}
+
+
+	protected void TrocaDeBixoE(object sender, EventArgs args)
+	{
+		if (GetCoisas == mamaco)
+		{
+			GetCoisas = calango;
+		}
+		else if (GetCoisas == calango)
+		{
+			GetCoisas = mamaco;
+		}
+
+		Bixoimg.Source = GetCoisas.GetCoisas();
+	}
+
+
+//-----------------------------------------------------------------------------------------------------------------\\
+
+
+	public void ClicaVolta(object sender, EventArgs args)
+	{
+		 Application.Current.MainPage = new MainPage();
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	//void BeberDolyy(){}
+
 
 }

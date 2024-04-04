@@ -47,7 +47,8 @@
         </Grid>
 
         <Label Text="Ele é um macaco e é isso. MACACO."
-               Grid.Row="1"
+               
+               Grid.Row="0"
                TextColor="Red"
                FontSize="25"/>
 
@@ -57,7 +58,7 @@
                 Text="VOLTAR"
                 FontSize="25"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"
+                VerticalOptions="End"
                 Grid.Row="3"/>
     </Frame>
 <!--=========================================================================================================================================-->
