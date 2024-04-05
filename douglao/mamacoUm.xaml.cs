@@ -1,6 +1,6 @@
 namespace douglao;
 
-public  class mamaco : Losmamacos
+public  class mamaco : Objetosjogo
 {
     public mamaco()
     {

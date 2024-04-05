@@ -1,6 +1,6 @@
 namespace douglao;
 
-public  class calango : Losmamacos
+public  class calango : Objetosjogo
 {
     public calango()
     {

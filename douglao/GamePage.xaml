@@ -35,6 +35,41 @@
 
 <!--====================================================================================================================================================================-->
 
+    <Frame BackgroundColor="White"
+           Grid.Row="0"
+           Grid.ColumnSpan="3">
+
+           <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <ProgressBar x:Name="BarraDolly"
+                 BackgroundColor="Red"
+                 HorizontalOptions="Fill"
+                 VerticalOptions="Center"
+                 Grid.Row="0"/>
+
+    <ProgressBar x:Name="BarraFominha"
+                 BackgroundColor="Black"
+                 HorizontalOptions="Fill"
+                 VerticalOptions="Center"
+                 Grid.Row="1"/>
+
+    <ProgressBar x:Name="BarraBatePinguim"
+                 BackgroundColor="Blue"
+                 HorizontalOptions="Fill"
+                 VerticalOptions="Center"
+                 Grid.Row="2"/>
+
+                 </Grid>
+
+    </Frame>
+
+<!--====================================================================================================================================================================-->
+
 
     <Button x:Name="ButaoDireita"
             Clicked="TrocaDeBixoD"
@@ -71,7 +106,7 @@
            
            HorizontalOptions="End"
            VerticalOptions="Fill"
-           IsVisible="true"
+           IsVisible="false"
            
            Grid.RowSpan="1"
            Grid.Column="2">
@@ -80,12 +115,13 @@
 
      
 
-   <Image Source="dolly.png"
-          HorizontalOptions="End"
-          VerticalOptions="End"
-          
-          Grid.Row="0"
-          Grid.Column="2"/>
+   <ImageButton  x:Name="Dolyy"
+                 Source="dolly.png"
+                 Clicked="BarraDollyV"
+                 HorizontalOptions="End"
+                 VerticalOptions="End"
+                 Grid.Row="0"
+                 Grid.Column="2"/>
 
    
     </Frame>
