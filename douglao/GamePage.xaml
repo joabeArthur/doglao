@@ -115,13 +115,13 @@
 
      
 
-   <ImageButton  x:Name="Dolyy"
+  <ImageButton  x:Name="Dolyy"
                  Source="dolly.png"
                  Clicked="BarraDollyV"
                  HorizontalOptions="End"
                  VerticalOptions="End"
                  Grid.Row="0"
-                 Grid.Column="2"/>
+                 Grid.Column="2"/> 
 
    
     </Frame>

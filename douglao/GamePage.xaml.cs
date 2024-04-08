@@ -62,10 +62,10 @@ public partial class GamePage : ContentPage
 
 //-----------------------------------------------------------------------------------------------------------------\\
 
-	//public void BarraDollyV(object sender, EventArgs args)
-	//{ 														//esse código é o problema
-		//GetCoisas.BarraDolly(GetCoisas.Getdolly()+1);
-	//}
+	public void BarraDollyV(object sender, EventArgs args)
+	{ 														
+		BarraDolly.dolly(GetCoisas.Getdolly()+1);
+	}
 
 //-----------------------------------------------------------------------------------------------------------------\\
 
