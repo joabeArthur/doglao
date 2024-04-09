@@ -12,8 +12,8 @@ public  class Objetosjogo
 
 //----------------------------------------------------------------------------------------------------\\
     protected int fominha = 0;
-    public int dolly = 0;
-    protected int batepinguim = 0;
+    protected int dolly = 0;
+    protected int Ratata = 0;
 
 //----------------------------------------------------------------------------------------------------\\
 
@@ -29,6 +29,30 @@ public  class Objetosjogo
         }
     }
 
+    public void BarraFominhaNv(int Bn)
+    {
+        if (Bn < 0)
+        {
+            fominha = 0;
+        }
+        else if (Bn < 1)
+        {
+            fominha = 1;
+        }
+    }
+
+    public void BarraRatataNv(int Bn)
+    {
+        if (Bn < 0)
+        {
+            Ratata = 0;
+        }
+        else if (Bn < 1)
+        {
+            Ratata = 1;
+        }
+    }
+
 //----------------------------------------------------------------------------------------------------\\
     public int Getfominha()
     {
@@ -40,9 +64,9 @@ public  class Objetosjogo
         return dolly;
     }
 
-    public int Getbatepinguim()
+    public int GetRatata()
     {
-        return batepinguim;
+        return Ratata;
     }
 
 }
