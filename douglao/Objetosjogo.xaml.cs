@@ -11,60 +11,72 @@ public  class Objetosjogo
     }
 
 //----------------------------------------------------------------------------------------------------\\
-    protected int fominha = 0;
-    protected int dolly = 0;
-    protected int Ratata = 0;
+    double  fominha = 0;
+    double dolly = 0;
+    double Ratata = 0;
 
 //----------------------------------------------------------------------------------------------------\\
 
-    public void BarraDollyNv(int Bn)
+    public void SetDolly(double d)
     {
-        if (Bn < 0)
+        if (d < 0)
         {
             dolly = 0;
         }
-        else if (Bn < 1)
+        else if (d > 1)
         {
             dolly = 1;
         }
+        else 
+        {
+            dolly = d;
+        }
     }
 
-    public void BarraFominhaNv(int Bn)
+    public void SetFominha(double f)
     {
-        if (Bn < 0)
+        if (f < 0)
         {
             fominha = 0;
         }
-        else if (Bn < 1)
+        else if (f > 1)
         {
             fominha = 1;
         }
+        else
+        {
+            fominha = f;
+        }
     }
 
-    public void BarraRatataNv(int Bn)
+    public void SetRatata(double r)
     {
-        if (Bn < 0)
+        if (r < 0)
         {
             Ratata = 0;
         }
-        else if (Bn < 1)
+        else if (r > 1)
         {
             Ratata = 1;
+        }
+        else
+        {
+            Ratata = r;
         }
     }
 
 //----------------------------------------------------------------------------------------------------\\
-    public int Getfominha()
+    public double Getfominha()
     {
         return fominha;
     }
 
-    public int Getdolly()
+    public double Getdolly()
     {
         return dolly;
     }
 
-    public int GetRatata()
+    public double GetRatata()
     {
         return Ratata;
     }

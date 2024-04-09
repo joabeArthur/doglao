@@ -2,7 +2,7 @@ namespace douglao;
 
 public partial class GamePage : ContentPage
 {
-	arvore irvore;
+	arvore 	arvore;
 	mamaco mamaco;  
 
 	calango calango;
@@ -15,9 +15,17 @@ public partial class GamePage : ContentPage
 
 		mamaco = new mamaco();
 		calango = new calango();
+		arvore = new arvore();
+
+
 		GetCoisas = mamaco;
+
 		//objetosjogo = BarraDolly;
 
+		var timer = Application.Current.Dispatcher.CreateTimer();
+		timer.Interval = TimeSpan.FromSeconds(1);
+		timer.Tick += (s, e) => PassouTempo();
+		timer.Start();
 		
 	}
 //-----------------------------------------------------------------------------------------------------------------\\
@@ -29,12 +37,13 @@ public partial class GamePage : ContentPage
 		}
 		else if (GetCoisas == calango)
 		{
-			GetCoisas = irvore;
+			GetCoisas = arvore;
 		}
-		else if (GetCoisas == irvore)
+		else if (GetCoisas == arvore)
 		{
 			GetCoisas = mamaco;
 		}
+		
 
 		Bixoimg.Source = GetCoisas.GetCoisas();
 
@@ -43,27 +52,45 @@ public partial class GamePage : ContentPage
 
 	protected void TrocaDeBixoE(object sender, EventArgs args)
 	{
-		if (GetCoisas == mamaco)
+		if (GetCoisas == arvore)
 		{
 			GetCoisas = calango;
 		}
 		else if (GetCoisas == calango)
 		{
-			GetCoisas = irvore;
-		}
-		else if (GetCoisas == irvore)
-		{
 			GetCoisas = mamaco;
 		}
-
+		else if (GetCoisas == mamaco)
+		{
+			GetCoisas = arvore;
+		}
+		
 		Bixoimg.Source = GetCoisas.GetCoisas();
+
 	}
 
 
 //-----------------------------------------------------------------------------------------------------------------\\
 
-	//public void LaTempo()
-	//{}
+	public void PassouTempo()
+	{
+		GetCoisas.SetFominha(GetCoisas.Getfominha() - 0.01);
+		LaBarraFominha.Progress = GetCoisas.Getfominha();
+
+		GetCoisas.SetRatata(GetCoisas.GetRatata() - 0.01);
+		LaBarraRatata.Progress = GetCoisas.GetRatata();
+
+		GetCoisas.SetDolly(GetCoisas.Getdolly() - 0.01);
+		BarraDolly.Progress = GetCoisas.Getdolly();
+
+		mamaco.SetFominha(mamaco.Getfominha() - 0.01);
+		mamaco.SetRatata(mamaco.GetRatata() - 0.001);
+		mamaco.SetDolly(mamaco.Getdolly() - 0.0001);
+
+		calango.SetFominha(calango.Getfominha() - 0.07);
+		calango.SetRatata(calango.GetRatata() - 0.007);
+		calango.SetDolly(calango.Getdolly() - 0.0007);
+	}
 
 //-----------------------------------------------------------------------------------------------------------------\\
 
@@ -77,20 +104,33 @@ public partial class GamePage : ContentPage
 
 	public void BarraDollyV(object sender, EventArgs args)
 	{ 														
-		BarraDolly.Progress = GetCoisas.Getdolly()+0.2;
+		GetCoisas.SetDolly(GetCoisas.Getdolly() + 0.1);
+		BarraDolly.Progress = GetCoisas.Getdolly();
 	}
 
 	public void BarraFominhaV(object sender, EventArgs args)
 	{ 														
-		LaBarraFominha.Progress = GetCoisas.Getfominha()+0.1;
+		GetCoisas.SetFominha(GetCoisas.Getfominha() + 0.1);
+		LaBarraFominha.Progress = GetCoisas.Getfominha();
 	}
 
 	public void BarraRatataV(object sender, EventArgs args)
 	{ 														
-		LaBarraRatata.Progress = GetCoisas.GetRatata()+0.3;
+		GetCoisas.SetRatata(GetCoisas.GetRatata() + 0.1);
+		LaBarraRatata.Progress = GetCoisas.GetRatata();
 	}
 
 //-----------------------------------------------------------------------------------------------------------------\\
+
+	public void ArrumarBarra()
+	{
+		LaBarraFominha.Progress = GetCoisas.Getfominha();
+
+		BarraDolly.Progress = GetCoisas.Getdolly();
+
+		LaBarraRatata.Progress = GetCoisas.GetRatata();
+
+	}
 
 	//void BeberDolyy(){}
 

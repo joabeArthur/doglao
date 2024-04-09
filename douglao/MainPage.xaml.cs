@@ -6,8 +6,11 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
+
+		
 	}
 
+	 
 	 public void IrOutraPage(object sender, EventArgs args)
     {
         Application.Current.MainPage = new GamePage();

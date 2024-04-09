@@ -48,21 +48,21 @@
 
     <ProgressBar x:Name="BarraDolly"
                  ProgressColor="Red"
-                 Progress="0.2"
+                 Progress="1"
                  HorizontalOptions="Fill"
                  VerticalOptions="Center"
                  Grid.Row="0"/>
 
     <ProgressBar x:Name="LaBarraFominha"
-                 ProgressColor="Pink"
-                 Progress="0.2"
+                 ProgressColor="Purple"
+                 Progress="1"
                  HorizontalOptions="Fill"
                  VerticalOptions="Center"
                  Grid.Row="1"/>
 
     <ProgressBar x:Name="LaBarraRatata"
                  ProgressColor="Blue"
-                 Progress="0.2"
+                 Progress="0.6"
                  HorizontalOptions="Fill"
                  VerticalOptions="Center"
                  Grid.Row="2"/>
