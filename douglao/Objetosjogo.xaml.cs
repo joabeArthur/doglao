@@ -11,9 +11,10 @@ public  class Objetosjogo
     }
 
 //----------------------------------------------------------------------------------------------------\\
-    double  fominha = 0;
-    double dolly = 0;
-    double Ratata = 0;
+    double  fominha = 0.5;
+    double dolly = 0.5;
+    double Ratata = 0.5;
+    bool morreu = false;
 
 //----------------------------------------------------------------------------------------------------\\
 
@@ -79,6 +80,11 @@ public  class Objetosjogo
     public double GetRatata()
     {
         return Ratata;
+    }
+
+    public bool GetMorreu()
+    {
+        return morreu;
     }
 
 }

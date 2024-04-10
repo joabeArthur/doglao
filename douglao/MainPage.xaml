@@ -44,13 +44,12 @@
         <RowDefinition Height="60"/>
     </Grid.RowDefinitions>
 
-        </Grid>
 
         <Label Text="Ele é um macaco e é isso. MACACO."
-               
-               Grid.Row="0"
+               Grid.RowSpan="2"
                TextColor="Red"
-               FontSize="25"/>
+               VerticalOptions="Center"
+               FontSize="45"/>
 
         <Button x:Name="VoltarBut"
                 Clicked="FrameOFF"
@@ -59,7 +58,8 @@
                 FontSize="25"
                 HorizontalOptions="Center"
                 VerticalOptions="End"
-                Grid.Row="3"/>
+                Grid.Row="2"/>
+    </Grid>            
     </Frame>
 <!--=========================================================================================================================================-->
 

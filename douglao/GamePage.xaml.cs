@@ -49,7 +49,6 @@ public partial class GamePage : ContentPage
 
 	}
 
-
 	protected void TrocaDeBixoE(object sender, EventArgs args)
 	{
 		if (GetCoisas == arvore)
@@ -69,11 +68,19 @@ public partial class GamePage : ContentPage
 
 	}
 
-
 //-----------------------------------------------------------------------------------------------------------------\\
 
 	public void PassouTempo()
 	{
+		if (BarraDolly.Progress <= 0 && LaBarraFominha.Progress <= 0 && LaBarraRatata.Progress <= 0)
+		{
+			tentardenovo.IsVisible = true;
+		}
+		else 
+		{
+			tentardenovo.IsVisible = false;
+		}
+
 		GetCoisas.SetFominha(GetCoisas.Getfominha() - 0.001);
 		LaBarraFominha.Progress = GetCoisas.Getfominha();
 
@@ -87,23 +94,26 @@ public partial class GamePage : ContentPage
 		mamaco.SetRatata(mamaco.GetRatata() - 0.05);
 		mamaco.SetDolly(mamaco.Getdolly() - 0.0005);
 
-		calango.SetFominha(calango.Getfominha() - 0.001);
-		calango.SetRatata(calango.GetRatata() - 0.01);
+		calango.SetFominha(calango.Getfominha() - 0.01);
+		calango.SetRatata(calango.GetRatata() - 0.001);
 		calango.SetDolly(calango.Getdolly() - 0.0001);
 
 		arvore.SetFominha(arvore.Getfominha() - 0.007);
 		arvore.SetRatata(arvore.GetRatata() - 0.07);
-		arvore.SetDolly(arvore.Getdolly() - 0.0007);
+		arvore.SetDolly(arvore.Getdolly() - 0.0007); 
 	}
 
 //-----------------------------------------------------------------------------------------------------------------\\
-
 
 	public void ClicaVolta(object sender, EventArgs args)
 	{
 		 Application.Current.MainPage = new MainPage();
 	}
 
+	public void DeuRuim(object sender, EventArgs args)
+	{
+		 Application.Current.MainPage = new MainPage();
+	}
 //-----------------------------------------------------------------------------------------------------------------\\
 
 	public void BarraDollyV(object sender, EventArgs args)
@@ -127,6 +137,5 @@ public partial class GamePage : ContentPage
 //-----------------------------------------------------------------------------------------------------------------\\
 
 	//void BeberDolyy(){}
-
 
 }

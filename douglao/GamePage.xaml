@@ -150,6 +150,35 @@
     </Frame>
 
 <!--====================================================================================================================================================================-->
+    <Frame x:Name="tentardenovo"
+           HorizontalOptions="Fill"
+           VerticalOptions="Fill"
+           IsVisible="true"
+           Grid.RowSpan="3"
+           Grid.ColumnSpan="3">
+    <Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <ImageButton Source="morte.png"
+           VerticalOptions="Fill"
+           Aspect="AspectFill"
+           Grid.RowSpan="2"
+           Grid.ColumnSpan="3"/>
+
+    <Button x:Name="voltar"
+            Clicked="DeuRuim"
+            Text="Voltar"
+            VerticalOptions="End"
+            Grid.Row="2"
+             Grid.ColumnSpan="3"/>
+
+    </Grid>
+    </Frame>
+<!--====================================================================================================================================================================-->
    </Grid>
 
 </ContentPage>
